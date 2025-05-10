@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-2">
           <Gift className="h-8 w-8 text-[#FF69B4]" />
-          <span className="font-display font-semibold text-2xl btn-color text-transparent bg-clip-text">Special Surprise</span>
+          <span className="font-display font-semibold text-2xl gradient-color text-transparent bg-clip-text">Special Surprise</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -21,7 +21,7 @@ const Navbar = () => {
           <Link href="/how-it-works" className="hover:text-[#FF69B4] transition-colors">How It Works</Link>
           <Link href="/testimonials" className="hover:text-[#FF69B4] transition-colors">Testimonials</Link>
           <Link href="/contact" className="hover:text-[#FF69B4] transition-colors">Contact</Link>
-          <Button className="bg-gradient-to-r from-[#FF69B4] to-[#9370DB] text-white font-semibold hover:opacity-90 hover:btn-bounce">
+          <Button className="gradient-color text-white font-semibold hover:opacity-90 hover:btn-zoom">
             Order Now
           </Button>
         </div>
@@ -74,7 +74,7 @@ const Navbar = () => {
             >
               Contact
             </Link>
-            <Button className="btn-color text-white font-semibold hover:opacity-90 hover:btn-bounce w-full">
+            <Button className="gradient-color text-white font-semibold hover:opacity-90 hover:btn-bounce w-full">
               Order Now
             </Button>
           </div>

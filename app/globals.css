@@ -38,25 +38,17 @@ h1, h2, h3, h4 {
 }
 
 @layer utilities {
-  @keyframes bounce-btn {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-2px);
-    }
+  .hover\:btn-zoom:hover {
+    transform: scale(1.05);
   }
 
-  .btn-bounce {
-    animation: bounce-btn 0.6s ease-in-out infinite;
-  }
-
-  .hover\:btn-bounce:hover {
-    animation: bounce-btn 0.6s ease-in-out infinite;
+  .btn-zoom {
+    transition: transform 0.3s ease-in-out;
   }
 }
 
-.btn-color {
+
+.gradient-color {
   @apply bg-gradient-to-r from-[#FF69B4] to-[#9370DB]
 }
 
