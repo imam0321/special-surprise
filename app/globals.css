@@ -1,6 +1,14 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@theme {
+  --color-surprise-pink: #ff69b4;
+  --color-surprise-purple: #9370db;
+  --color-surprise-yellow: #ffd700;
+  --color-surprise-teal: #40e0d0;
+  --color-surprise-coral: #ff7f50;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -8,33 +16,37 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   @apply font-bold;
 }
 
 .font-display {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
-.card {
-  padding: 2em;
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes bounce-slight {
+   0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 @layer utilities {
@@ -45,15 +57,25 @@ h1, h2, h3, h4 {
   .btn-zoom {
     transition: transform 0.3s ease-in-out;
   }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-bounce-slight {
+    animation: bounce-slight 2s ease-in-out infinite;
+  }
 }
 
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-surprise-pink to-surprise-purple;
+  }
 
-.gradient-color {
-  @apply bg-gradient-to-r from-[#FF69B4] to-[#9370DB]
+  .btn-bounce {
+    @apply transition-transform hover:scale-105 active:scale-95;
+  }
+  .card {
+    padding: 2em;
+  }
 }
-
-
-
-
-
-
