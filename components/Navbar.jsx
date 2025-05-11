@@ -7,7 +7,7 @@ import { useState } from "react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="backdrop-blur-3xl sticky top-0 z-50 w-full ">
+    <nav className="backdrop-blur-3xl sticky top-0 z-50 w-full">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-2">
           <Gift className="h-8 w-8 text-surprise-pink" />

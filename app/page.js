@@ -1,8 +1,9 @@
+import CallToAction from "@/components/CallToAction";
 import Categories from "@/components/Categories";
 import FeaturedSurprises from "@/components/FeaturedSurprises";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
-import { Button } from "@/components/ui/button";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
       <Categories />
       <FeaturedSurprises />
       <HowItWorks />
+      <Testimonials />
+      <CallToAction />
     </>
   );
 }
