@@ -7,6 +7,9 @@
   --color-surprise-yellow: #ffd700;
   --color-surprise-teal: #40e0d0;
   --color-surprise-coral: #ff7f50;
+
+  --foreground: 222.2 84% 4.9%;
+  --muted-foreground: 210 10% 40%;
 }
 
 #root {
@@ -32,7 +35,8 @@ h4 {
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -41,7 +45,8 @@ h4 {
 }
 
 @keyframes bounce-slight {
-   0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -65,17 +70,26 @@ h4 {
   .animate-bounce-slight {
     animation: bounce-slight 2s ease-in-out infinite;
   }
+
+  .text-foreground {
+    color: hsl(var(--foreground));
+  }
+  .text-muted-foreground {
+    color: hsl(var(--muted-foreground));
+  }
 }
 
 @layer components {
   .gradient-text {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-surprise-pink to-surprise-purple;
   }
-
   .btn-bounce {
     @apply transition-transform hover:scale-105 active:scale-95;
   }
   .card {
     padding: 2em;
+  }
+  .read-the-docs {
+    color: #888;
   }
 }
