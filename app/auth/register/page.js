@@ -1,6 +1,22 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+"use client"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useForm } from "react-hook-form";
+import { LogIn, UserPlus } from "lucide-react";
 
 const RegisterPage = () => {
+  const registerForm = useForm({
+    defaultValues: {
+      name: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    },
+  });
+
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
       <div className="w-full max-w-md">
@@ -16,7 +32,6 @@ const RegisterPage = () => {
           <CardContent>
             <Form {...registerForm}>
               <form
-                onSubmit={registerForm.handleSubmit(onRegisterSubmit)}
                 className="space-y-4"
               >
                 <FormField
@@ -84,14 +99,14 @@ const RegisterPage = () => {
                 />
                 <Button
                   type="submit"
-                  className="w-full"
+                  className="w-full bg-surprise-pink text-white"
                   disabled={registerForm.formState.isSubmitting}
                 >
                   <UserPlus className="mr-2 h-4 w-4" />
                   Register
                 </Button>
               </form>
-            </Forn>
+            </Form>
           </CardContent>
           <CardFooter>
             <Button variant="link" className="w-full">
