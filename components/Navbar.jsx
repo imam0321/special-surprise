@@ -21,6 +21,7 @@ const Navbar = () => {
           <Link href="/how-it-works" className="text-foreground hover:text-surprise-pink transition-colors">How It Works</Link>
           <Link href="/testimonials" className="text-foreground hover:text-surprise-pink transition-colors">Testimonials</Link>
           <Link href="/contact" className="text-foreground hover:text-surprise-pink transition-colors">Contact</Link>
+          <Link href="/auth/login" className="text-foreground hover:text-surprise-pink transition-colors py-2">Login</Link>
           <Button className="text-white bg-gradient-to-r from-surprise-pink to-surprise-purple hover:opacity-90 btn-bounce">
             Order Now
           </Button>
@@ -73,6 +74,13 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               Contact
+            </Link>
+            <Link
+              href="/auth/login"
+              className="text-foreground hover:text-surprise-pink transition-colors py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Login
             </Link>
             <Button className="text-white font-semibold bg-gradient-to-r from-surprise-pink to-surprise-purple hover:opacity-90 w-full">
               Order Now

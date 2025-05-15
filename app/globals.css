@@ -82,6 +82,7 @@ h4 {
   .text-muted-foreground {
     color: hsl(var(--muted-foreground));
   }
+
 }
 
 @layer components {
@@ -96,5 +97,8 @@ h4 {
   }
   .read-the-docs {
     color: #888;
+  }
+  .input-border{
+    @apply bg-white border-gray-200 focus:ring-surprise-pink focus:outline-none;
   }
 }
