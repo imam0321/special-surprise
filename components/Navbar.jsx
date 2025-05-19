@@ -18,8 +18,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-8">
           <Link href="/" className="text-foreground hover:text-surprise-pink transition-colors">Home</Link>
           <Link href="/surprises" className="text-foreground hover:text-surprise-pink transition-colors">Surprises</Link>
-          <Link href="/how-it-works" className="text-foreground hover:text-surprise-pink transition-colors">How It Works</Link>
-          <Link href="/testimonials" className="text-foreground hover:text-surprise-pink transition-colors">Testimonials</Link>
+          <Link href="/about-us" className="text-foreground hover:text-surprise-pink transition-colors">About Us</Link>
           <Link href="/contact" className="text-foreground hover:text-surprise-pink transition-colors">Contact</Link>
           <Link href="/auth/login" className="text-foreground hover:text-surprise-pink transition-colors py-2">Login</Link>
           <Button className="text-white bg-gradient-to-r from-surprise-pink to-surprise-purple hover:opacity-90 btn-bounce">
@@ -55,18 +54,11 @@ const Navbar = () => {
               Surprises
             </Link>
             <Link
-              href="/how-it-works"
+              href="/about us"
               className="text-foreground hover:text-surprise-pink transition-colors py-2"
               onClick={() => setIsOpen(false)}
             >
-              How It Works
-            </Link>
-            <Link
-              href="/testimonials"
-              className="text-foreground hover:text-surprise-pink transition-colors py-2"
-              onClick={() => setIsOpen(false)}
-            >
-              Testimonials
+              About Us
             </Link>
             <Link
               href="/contact"
