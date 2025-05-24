@@ -20,6 +20,7 @@ const Navbar = () => {
           <Link href="/surprises" className="text-foreground hover:text-surprise-pink transition-colors">Surprises</Link>
           <Link href="/about-us" className="text-foreground hover:text-surprise-pink transition-colors">About Us</Link>
           <Link href="/contact" className="text-foreground hover:text-surprise-pink transition-colors">Contact</Link>
+          <Link href="/dashboard/admin" className="text-foreground hover:text-surprise-pink transition-colors">Dashboard</Link>
           <Link href="/auth/login" className="text-foreground hover:text-surprise-pink transition-colors py-2">Login</Link>
           <Button className="text-white bg-gradient-to-r from-surprise-pink to-surprise-purple hover:opacity-90 btn-bounce">
             Order Now
@@ -66,6 +67,13 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               Contact
+            </Link>
+            <Link
+              href="/dashboard/admin"
+              className="text-foreground hover:text-surprise-pink transition-colors py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Dashboard
             </Link>
             <Link
               href="/auth/login"
